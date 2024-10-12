@@ -1,0 +1,9 @@
+.btn-regular {
+    background-color: blueviolet;
+    color: whitesmoke;
+    padding: 12px 24px;
+    border-radius: 16px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
