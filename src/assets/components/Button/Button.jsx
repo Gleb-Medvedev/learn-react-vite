@@ -1,11 +1,14 @@
 import { Children } from 'react'
 import './Button.css'
 
-export function Button({ children }) {
+export function Button({ children, text, clicked }) { //Здесь PROPS вписаны сразу как атрибуты функции, вместо объявления константы с деструктуризацией
+    // Расшифровка:
 
-    function checkClick() {
-        console.log(`Нажал кнопку`);        
-    }
+    //Здесь "Children" - это PROP, благодаря которому мы получаем текст между открывающим/закрывающим тегами кнопки
+    // (СМ. App.jsx, а именно отличия в компонентах кнопки)
 
-    return <button className="btn-regular" onClick={checkClick}>{ children }</button>
+    //Text - обычный проп для получения текста в кнопке "как обычно"
+    //clicked - PROP компонента, которому ты присваиваешь ФУНКЦИЮ
+
+    return <button className='btn-regular' onClick={clicked}>{ text ? text : children }</button>
 }

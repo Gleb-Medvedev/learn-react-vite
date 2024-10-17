@@ -18,6 +18,11 @@ main {
   padding-top: 2rem;
 }
 
+.tabs-content {
+  margin-top: 24px;
+  font-size: 2.4rem;
+}
+
 h3 {
   margin-bottom: 1rem;
 }
