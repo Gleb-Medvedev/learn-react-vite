@@ -21,6 +21,8 @@ main {
 .tabs-content {
   margin-top: 24px;
   font-size: 2.4rem;
+  max-width: inherit;
+  overflow: hidden;
 }
 
 h3 {

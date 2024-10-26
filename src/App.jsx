@@ -22,7 +22,11 @@ export default function App() {
 
   function btnClick({key}) {
     setTabsContent(key)
-  } 
+    event.target.classList.contains('active') ? event.target.classList.remove('active') : event.target.classList.add('active');
+  }
+  // event.target.classList.contains('active') ? event.target.classList.remove('active') : event.target.classList.add('active');
+
+  
 
   return (
     <div>
@@ -43,6 +47,7 @@ export default function App() {
 
         <section>
           <h3>Чем мы отличаемся от других?</h3>
+              <div className="buttons-container">
               {
                 Object.keys(differences).map((key, index) => {  //Создаёт кнопку для каждого ключа из массива "diffenrences" и устанавливает ей текст
                                                                 //По клику на ту или иную кнопку отображает соответствующий ключу из массива "diffenrences" контент
@@ -50,10 +55,11 @@ export default function App() {
                   return (
                     <Button clicked={() => btnClick({key})} key={index}>{ key }</Button>  //событие clicked - это PROP из компонента Button!
                                                                                           //По событию onClick выполняется именно "clicked" (смотри Button компонент)
-                                                                                          //Замыканием в "btnClicked" (см тут выше) передаётся и обрабатывается PROP "key"
+                                                                                          //Замыканием(?) в "btnClicked" (см тут выше) передаётся и обрабатывается PROP "key"
                   )
                 })
               }
+              </div>
 
               {/* <Button clicked={() => handleClick('way')}>раз</Button> */}  
               {/* "привычная" из HTML запись контента "между открывающим/закрывающим тегами" компонента. */}
@@ -69,7 +75,9 @@ export default function App() {
               передана анонимная функция (ЗАМЫКАНИЕ), которая выполняет то же самое, что и "clicked={handleClick}"*/}
 
 
-              <p className="tabs-content">{ differences[tabsContent] }</p>
+              <p className="tabs-content">{ differences[tabsContent] ? differences[tabsContent] : tabsContent}</p>
+
+              
         </section>
       </main>
     </div>

@@ -1,9 +1,12 @@
 import './Header.css'
-// import logo from '/public/logo-name.svg'
+import { useState } from 'react';
 
 export function Header() {
 
-    const date = new Date();
+    const [date, setDate] = useState(new Date());
+
+    setInterval(() => setDate(new Date()), 1000);
+
 
     return (
         <header>
@@ -12,3 +15,5 @@ export function Header() {
         </header>
     )
 }
+
+// date.toLocaleTimeString()

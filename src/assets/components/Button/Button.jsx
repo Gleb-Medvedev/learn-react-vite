@@ -1,5 +1,6 @@
 import { Children } from 'react'
 import './Button.css'
+// import { useState } from 'react';
 
 export function Button({ children, text, clicked }) { //Здесь PROPS вписаны сразу как атрибуты функции, вместо объявления константы с деструктуризацией
     // Расшифровка:

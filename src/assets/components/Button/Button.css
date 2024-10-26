@@ -11,3 +11,7 @@
 .btn-regular:not(:last-child) {
     margin-right: 24px;
 }
+
+.btn-regular.active {
+    background-color: blue;
+}
