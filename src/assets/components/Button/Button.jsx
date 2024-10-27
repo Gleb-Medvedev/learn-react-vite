@@ -2,7 +2,7 @@ import { Children } from 'react'
 import './Button.css'
 // import { useState } from 'react';
 
-export function Button({ children, text, clicked }) { //Здесь PROPS вписаны сразу как атрибуты функции, вместо объявления константы с деструктуризацией
+export function Button({ children, text, clicked, isActive }) { //Здесь PROPS вписаны сразу как атрибуты функции, вместо объявления константы с деструктуризацией
     // Расшифровка:
 
     //Здесь "Children" - это PROP, благодаря которому мы получаем текст между открывающим/закрывающим тегами кнопки
@@ -11,5 +11,5 @@ export function Button({ children, text, clicked }) { //Здесь PROPS впи�
     //Text - обычный проп для получения текста в кнопке "как обычно"
     //clicked - PROP компонента, которому ты присваиваешь ФУНКЦИЮ
 
-    return <button className='btn-regular' onClick={clicked}>{ text ? text : children }</button>
+    return <button className={isActive ? 'btn-regular active' : 'btn-regular'} onClick={clicked}>{ text ? text : children }</button>
 }
