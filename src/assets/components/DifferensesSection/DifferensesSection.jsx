@@ -21,7 +21,7 @@ export function DifferencesSection() {
     // }
 
     return (
-        <section>
+        <section className="section differenses-section">
           <h3>Чем мы отличаемся от других?</h3>
               <div className="buttons-container">
               {
