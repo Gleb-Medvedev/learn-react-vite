@@ -13,9 +13,6 @@ export function Button({ text, children, clicked, toggleActiveClassName }) { //�
 
     //toggleActiveClassName - проверка на наличие className'a 'Active' (см DifferencesSection.jsx)
 
-    console.log(`Log from Button Component. Button text is ${text}`);
-    
-
     let btnClasses = 'btn-regular';
 
     return <button className={toggleActiveClassName ? btnClasses += ' active' : btnClasses} onClick={clicked}>{ text ? text : children }</button>
