@@ -24,9 +24,6 @@ export default function App() {
         {
           tab === 'feedback' && <FeedbackSection />
         }
-        {/* <ListSection />
-        <DifferencesSection />
-        <FeedbackSection /> */}
       </main>
       </>
   )

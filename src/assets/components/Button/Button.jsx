@@ -1,5 +1,8 @@
 import { Children } from 'react';
-import './Button.css'
+import classes from './Button.module.css'
+
+console.log(classes);
+
 
 export function Button({ text, children, clicked, toggleActiveClassName }) { //Здесь PROPS вписаны сразу как атрибуты функции,
                                                                             //вместо объявления константы с деструктуризацией
@@ -13,7 +16,7 @@ export function Button({ text, children, clicked, toggleActiveClassName }) { //�
 
     //toggleActiveClassName - проверка на наличие className'a 'Active' (см DifferencesSection.jsx)
 
-    let btnClasses = 'btn-regular';
+    // let btnClasses = 'btn-regular';
 
-    return <button className={toggleActiveClassName ? btnClasses += ' active' : btnClasses} onClick={clicked}>{ text ? text : children }</button>
+    return <button className={toggleActiveClassName ? `${classes.btn} ${classes.active}` : classes.btn} onClick={clicked}>{ text ? text : children }</button>
 }

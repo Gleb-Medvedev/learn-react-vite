@@ -48,3 +48,11 @@ p {
 .active {
   background-color: blue;
 }
+
+.input {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid red;
+  border-radius: 12px;
+}

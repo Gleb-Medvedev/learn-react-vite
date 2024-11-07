@@ -1,4 +1,4 @@
-.btn-regular {
+.btn {
     background-color: blueviolet;
     color: whitesmoke;
     padding: 12px 24px;
@@ -6,12 +6,17 @@
     border: none;
     font-size: 24px;
     cursor: pointer;
+    transition: 300ms linear background;
 }
 
-.btn-regular:not(:last-child) {
+.btn:not(:last-child) {
     margin-right: 24px;
 }
 
-.btn-regular.active {
+.active {
     background-color: blue;
+}
+
+.block {
+    display: block;
 }

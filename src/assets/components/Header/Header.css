@@ -1,4 +1,4 @@
-header {
+.header {
     max-height: 50px;
     display: flex;
     padding: 0 2rem;
@@ -9,7 +9,7 @@ header {
     overflow: hidden;
   }
 
-header > img {
+.header > img {
   height: 50px;
   width: 50px;
   display: block;
