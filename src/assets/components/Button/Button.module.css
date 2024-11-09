@@ -20,3 +20,8 @@
 .block {
     display: block;
 }
+
+.btn:disabled {
+    background-color: rgb(121, 13, 13);
+    cursor: not-allowed;
+}

@@ -11,7 +11,6 @@ export function FeedbackSection() {
     function inputTextChange(event) {
         setText(event.target.value)
         setHasError(event.target.value.trim().length < 2 ? true : false)
-        console.log(hasError);        
     }
 
     function qwe(event) {
@@ -31,8 +30,19 @@ export function FeedbackSection() {
                     <option value="help">Нужна помощь</option>
                     <option value="suggestion">Есть предложение</option>
                 </select>
+                <hr />
+                <br />
+                <div>
+                    {text}
+                </div>
+                <hr />
+                <div>
+                    {reason}
+                </div>
+                <br />
 
-                <Button text={'Отправить!'} onClick={onsubmit}></Button>
+
+                <Button disabled={hasError}>{!hasError ? 'Отправить' : 'Хуюшки!'}</Button>
             </form>
         </section>
     )

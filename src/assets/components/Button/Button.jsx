@@ -1,11 +1,17 @@
-import { Children } from 'react';
+import { Children, useState } from 'react';
 import classes from './Button.module.css'
 
 console.log(classes);
 
 
-export function Button({ text, children, clicked, toggleActiveClassName }) { //Здесь PROPS вписаны сразу как атрибуты функции,
+export function Button({ text, children, clicked, toggleActiveClassName, ...props }) { //Здесь PROPS вписаны сразу как атрибуты функции,
                                                                             //вместо объявления константы с деструктуризацией
+                                                                            // "...props" оператор REST - по сути делает так, что
+                                                                            // любой объявленный ПРОП (смотри FeedbackSection в параметр "disabled"
+                                                                            //будет присвоен "сам себе".
+                                                                            // т.е. это то же самое, что и "disabled = {disabled}"
+                                                                            //где первый "disabled" - это "привычный" параметр кнопки
+                                                                            //а второй - уже сам ПРОП
     // Расшифровка:
 
     //Здесь "Children" - это PROP, благодаря которому мы получаем текст между открывающим/закрывающим тегами кнопки
@@ -18,5 +24,5 @@ export function Button({ text, children, clicked, toggleActiveClassName }) { //�
 
     // let btnClasses = 'btn-regular';
 
-    return <button className={toggleActiveClassName ? `${classes.btn} ${classes.active}` : classes.btn} onClick={clicked}>{ text ? text : children }</button>
+    return <button className={toggleActiveClassName ? `${classes.btn} ${classes.active}` : classes.btn} onClick={clicked} {...props}>{ text ? text : children }</button>
 }
