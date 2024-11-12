@@ -1,11 +1,9 @@
 import { Children, useState } from 'react';
 import classes from './Button.module.css'
 
-console.log(classes);
-
-
 export function Button({ text, children, clicked, toggleActiveClassName, ...props }) { //Здесь PROPS вписаны сразу как атрибуты функции,
                                                                             //вместо объявления константы с деструктуризацией
+
                                                                             // "...props" оператор REST - по сути делает так, что
                                                                             // любой объявленный ПРОП (смотри FeedbackSection в параметр "disabled"
                                                                             //будет присвоен "сам себе".
