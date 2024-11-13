@@ -4,10 +4,11 @@ import { Header } from "./assets/components/Header/Header"
 import { ListSection } from "./assets/components/ListSection/ListSection"
 import { useState } from 'react';
 import { TabsSection } from "./assets/components/TabsSection/TabsSection";
+import { EffectsSection } from "./assets/components/EffectsSection/EffectsSection";
 
 export default function App() {
 
-  const [tab, setTab] = useState('feedback')
+  const [tab, setTab] = useState('effect')
   
   return (
     <>
@@ -23,6 +24,9 @@ export default function App() {
         }
         {
           tab === 'feedback' && <FeedbackSection />
+        }
+        {
+          tab === 'effect' && <EffectsSection />
         }
       </main>
       </>
