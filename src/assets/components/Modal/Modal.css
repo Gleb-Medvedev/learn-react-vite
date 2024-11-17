@@ -10,4 +10,5 @@
 
 .modal::backdrop {
     backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.651);
 }

@@ -12,7 +12,7 @@ export default function App() {
   
   return (
     <>
-      <Header/>
+      <Header />
       <main>
           <TabsSection current={tab} transferProp={(text) => setTab(text)}/>
          {
